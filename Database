@@ -1,0 +1,318 @@
+PROFESOR,19234568,Juan Pablo,Gomez Parra, juanpablo@gmail.com,46578132,1
+PROFESOR,79458124,Carlos,Perea Duarte,jfadskjf@gmail.com,1234565,1
+PROFESOR,1031540227,Nicolas,Guevara Herran,nicoguehe@gmail.com,123456789,1
+PROFESOR,1031540228,Juan,Martinez Diaz,juan.martinez@example.com,987654321,2
+PROFESOR,1031540229,Maria,Ramirez Garcia,maria.ramirez@example.com,456123789,3
+ESTUDIANTE,99,Gabriel Riascos
+ESTUDIANTE,100,Laura Peralta
+ESTUDIANTE,101,Alejandra Munar
+ESTUDIANTE,104,Laura Gomez
+ESTUDIANTE,105,Pedro Jimenez
+ESTUDIANTE,106,Sofia Rojas
+ESTUDIANTE,107,Jose Luis Vargas
+ESTUDIANTE,108,Lucia Fernandez
+ESTUDIANTE,109,Raul Castro
+ESTUDIANTE,110,Alejandro Soto
+ESTUDIANTE,111,Isabel Nieto
+ESTUDIANTE,112,Andrea Munoz
+ESTUDIANTE,113,Manuel Martinez
+ESTUDIANTE,114,Elena Sanchez
+ESTUDIANTE,115,Santiago Ortega
+ESTUDIANTE,116,Patricia Suarez
+ESTUDIANTE,117,Daniela Gil
+ESTUDIANTE,118,Oscar Parra
+ESTUDIANTE,119,Zara Tovar
+ESTUDIANTE,311,Maria Rodriguez
+ESTUDIANTE,312,Juan Perez
+ESTUDIANTE,313,Jose Gonzales
+ESTUDIANTE,321,Margarita Lopez
+ESTUDIANTE,322,Jesus Garcia
+CLASE,19234568
+CLASE,79458124
+CLASE,1031540227
+CLASE,1031540228
+CLASE,1031540229
+MATERIA,19234568,Ciencias I
+TEMA,Ciencias I,19234568,1,Tipos de algoritmos
+TEMA,Ciencias I,19234568,2,Busqueda y Ordenamientos
+TEMA,Ciencias I,19234568,3,Complejidad en tiempo y memoria
+TEMA,Ciencias I,19234568,4,Ordenes de complejidad
+TEMA,Ciencias I,19234568,5,Complejidad en algoritmos recursivos
+TEMA,Ciencias I,19234568,6,Problemas NP y NP-Completos
+TEMA,Ciencias I,19234568,7,Listas y Multilistas
+TEMA,Ciencias I,19234568,8,Pilas y Colas
+TEMA,Ciencias I,19234568,9,Arboles Binarios
+TEMA,Ciencias I,19234568,10,Representacion de los arboles
+TEMA,Ciencias I,19234568,11,Arboles AVL y Rojinegros
+TEMA,Ciencias I,19234568,12,Arboles B y B+
+MATRICULA,Ciencias I,19234568,311
+MATRICULA,Ciencias I,19234568,312
+MATRICULA,Ciencias I,19234568,313
+MATERIA,79458124,Ciencias I Grupo 2
+MATRICULA,Ciencias I Grupo 2,79458124,322
+MATERIA,1031540227,Fisica
+TEMA,Fisica,1031540227,1,Mecanica
+TEMA,Fisica,1031540227,2,Termodinamica
+MATRICULA,Fisica,1031540227,104
+MATRICULA,Fisica,1031540227,105
+MATRICULA,Fisica,1031540227,106
+MATRICULA,Fisica,1031540227,107
+MATERIA,1031540228,Historia
+TEMA,Historia,1031540228,4,Antigua
+MATRICULA,Historia,1031540228,100
+MATRICULA,Historia,1031540228,101
+MATERIA,1031540228,Literatura
+TEMA,Literatura,1031540228,1,Clasica
+TEMA,Literatura,1031540228,2,Contemporanea
+MATRICULA,Literatura,1031540228,108
+MATRICULA,Literatura,1031540228,109
+MATRICULA,Literatura,1031540228,110
+MATRICULA,Literatura,1031540228,111
+MATRICULA,Literatura,1031540228,112
+MATERIA,1031540229,Biologia
+TEMA,Biologia,1031540229,1,Genetica
+TEMA,Biologia,1031540229,2,Ecologia
+MATRICULA,Biologia,1031540229,100
+MATRICULA,Biologia,1031540229,101
+MATRICULA,Biologia,1031540229,118
+MATERIA,1031540229,Quimica
+TEMA,Quimica,1031540229,1,Organica
+TEMA,Quimica,1031540229,2,Inorganica
+TEMA,Quimica,1031540229,5,Quidditch
+MATRICULA,Quimica,1031540229,113
+MATRICULA,Quimica,1031540229,114
+MATRICULA,Quimica,1031540229,115
+MATRICULA,Quimica,1031540229,116
+MATRICULA,Quimica,1031540229,117
+CORTE,19234568,Parcial 1,20
+EVALUACION,19234568,Parcial 1,Parcial 1 CCI
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,20,1
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,10,2
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,2,311,1.4
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,2,312,1
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,2,313,2.5
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,10,3
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,3,311,1.4
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,3,312,1
+NOTA,19234568,Parcial 1,Parcial 1 CCI,10,3,313,2.5
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,20,4
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,4,311,3.4
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,4,312,3.3
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,4,313,4.3
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,20,5
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,5,311,4.5
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,5,312,2.2
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,5,313,5
+PUNTO,19234568,Parcial 1,Parcial 1 CCI,20,6
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,6,311,3.6
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,6,312,1.8
+NOTA,19234568,Parcial 1,Parcial 1 CCI,20,6,313,4.6
+CORTE,19234568,Parcial 2,20
+EVALUACION,19234568,Parcial 2,Parcial 2 CCI
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,10,7
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,10,8
+NOTA,19234568,Parcial 2,Parcial 2 CCI,10,8,311,2.2
+NOTA,19234568,Parcial 2,Parcial 2 CCI,10,8,312,2.5
+NOTA,19234568,Parcial 2,Parcial 2 CCI,10,8,313,1.1
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,20,9
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,20,10
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,10,311,3.3
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,10,312,3.4
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,10,313,4.3
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,20,11
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,11,311,3.6
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,11,312,2
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,11,313,2.8
+PUNTO,19234568,Parcial 2,Parcial 2 CCI,20,12
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,12,311,4.9
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,12,312,3.8
+NOTA,19234568,Parcial 2,Parcial 2 CCI,20,12,313,3.2
+CORTE,19234568,Proyecto Final,30
+EVALUACION,19234568,Proyecto Final,Proyecto Final CCI
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,2
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,3
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,4
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,5
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,5,311,3.9
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,5,312,3.3
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,5,313,3.8
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,7
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,8
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,9
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,10
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,11
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,11,311,3.8
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,11,312,2.8
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,11,313,3.1
+PUNTO,19234568,Proyecto Final,Proyecto Final CCI,10,12
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,12,311,4.2
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,12,312,2.5
+NOTA,19234568,Proyecto Final,Proyecto Final CCI,10,12,313,2.6
+CORTE,19234568,Quiz Primer Corte,7
+EVALUACION,19234568,Quiz Primer Corte,quiz 1
+PUNTO,19234568,Quiz Primer Corte,quiz 1,30,1
+NOTA,19234568,Quiz Primer Corte,quiz 1,30,1,311,4.1
+NOTA,19234568,Quiz Primer Corte,quiz 1,30,1,312,2.5
+NOTA,19234568,Quiz Primer Corte,quiz 1,30,1,313,3.3
+PUNTO,19234568,Quiz Primer Corte,quiz 1,70,2
+NOTA,19234568,Quiz Primer Corte,quiz 1,70,2,311,3.2
+NOTA,19234568,Quiz Primer Corte,quiz 1,70,2,312,2.2
+NOTA,19234568,Quiz Primer Corte,quiz 1,70,2,313,3.8
+EVALUACION,19234568,Quiz Primer Corte,quiz 2
+PUNTO,19234568,Quiz Primer Corte,quiz 2,60,3
+NOTA,19234568,Quiz Primer Corte,quiz 2,60,3,311,2.8
+NOTA,19234568,Quiz Primer Corte,quiz 2,60,3,312,3.1
+NOTA,19234568,Quiz Primer Corte,quiz 2,60,3,313,4.2
+PUNTO,19234568,Quiz Primer Corte,quiz 2,40,4
+NOTA,19234568,Quiz Primer Corte,quiz 2,40,4,311,2.5
+NOTA,19234568,Quiz Primer Corte,quiz 2,40,4,312,2.6
+NOTA,19234568,Quiz Primer Corte,quiz 2,40,4,313,4.5
+EVALUACION,19234568,Quiz Primer Corte,quiz 3
+PUNTO,19234568,Quiz Primer Corte,quiz 3,75,5
+NOTA,19234568,Quiz Primer Corte,quiz 3,75,5,311,1.8
+NOTA,19234568,Quiz Primer Corte,quiz 3,75,5,312,1.5
+NOTA,19234568,Quiz Primer Corte,quiz 3,75,5,313,4
+PUNTO,19234568,Quiz Primer Corte,quiz 3,25,6
+NOTA,19234568,Quiz Primer Corte,quiz 3,25,6,311,3.6
+NOTA,19234568,Quiz Primer Corte,quiz 3,25,6,312,3.4
+NOTA,19234568,Quiz Primer Corte,quiz 3,25,6,313,4.7
+CORTE,19234568,Quiz Segundo Corte,7
+EVALUACION,19234568,Quiz Segundo Corte,quiz 4
+PUNTO,19234568,Quiz Segundo Corte,quiz 4,70,7
+NOTA,19234568,Quiz Segundo Corte,quiz 4,70,7,311,2
+NOTA,19234568,Quiz Segundo Corte,quiz 4,70,7,312,3.5
+NOTA,19234568,Quiz Segundo Corte,quiz 4,70,7,313,4.1
+PUNTO,19234568,Quiz Segundo Corte,quiz 4,30,8
+NOTA,19234568,Quiz Segundo Corte,quiz 4,30,8,311,3.5
+NOTA,19234568,Quiz Segundo Corte,quiz 4,30,8,312,3.2
+NOTA,19234568,Quiz Segundo Corte,quiz 4,30,8,313,4
+EVALUACION,19234568,Quiz Segundo Corte,quiz 5
+PUNTO,19234568,Quiz Segundo Corte,quiz 5,50,9
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,9,311,2.6
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,9,312,3.8
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,9,313,4.2
+PUNTO,19234568,Quiz Segundo Corte,quiz 5,50,10
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,10,311,3.3
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,10,312,3.9
+NOTA,19234568,Quiz Segundo Corte,quiz 5,50,10,313,3.8
+EVALUACION,19234568,Quiz Segundo Corte,quiz 6
+PUNTO,19234568,Quiz Segundo Corte,quiz 6,65,11
+NOTA,19234568,Quiz Segundo Corte,quiz 6,65,11,311,4.6
+NOTA,19234568,Quiz Segundo Corte,quiz 6,65,11,312,4.1
+NOTA,19234568,Quiz Segundo Corte,quiz 6,65,11,313,1.5
+PUNTO,19234568,Quiz Segundo Corte,quiz 6,35,12
+NOTA,19234568,Quiz Segundo Corte,quiz 6,35,12,311,5
+NOTA,19234568,Quiz Segundo Corte,quiz 6,35,12,312,2.6
+NOTA,19234568,Quiz Segundo Corte,quiz 6,35,12,313,1.2
+CORTE,19234568,Talleres Primer Corte,8
+EVALUACION,19234568,Talleres Primer Corte,Taller 1
+PUNTO,19234568,Talleres Primer Corte,Taller 1,10,1
+NOTA,19234568,Talleres Primer Corte,Taller 1,10,1,311,2
+NOTA,19234568,Talleres Primer Corte,Taller 1,10,1,312,3.5
+NOTA,19234568,Talleres Primer Corte,Taller 1,10,1,313,4.1
+PUNTO,19234568,Talleres Primer Corte,Taller 1,30,2
+NOTA,19234568,Talleres Primer Corte,Taller 1,30,2,311,3.5
+NOTA,19234568,Talleres Primer Corte,Taller 1,30,2,312,3.2
+NOTA,19234568,Talleres Primer Corte,Taller 1,30,2,313,4
+PUNTO,19234568,Talleres Primer Corte,Taller 1,60,3
+NOTA,19234568,Talleres Primer Corte,Taller 1,60,3,311,4.2
+NOTA,19234568,Talleres Primer Corte,Taller 1,60,3,312,2.6
+NOTA,19234568,Talleres Primer Corte,Taller 1,60,3,313,3.8
+EVALUACION,19234568,Talleres Primer Corte,Taller 2
+PUNTO,19234568,Talleres Primer Corte,Taller 2,20,4
+NOTA,19234568,Talleres Primer Corte,Taller 2,20,4,311,3.8
+NOTA,19234568,Talleres Primer Corte,Taller 2,20,4,312,3.3
+NOTA,19234568,Talleres Primer Corte,Taller 2,20,4,313,3.9
+PUNTO,19234568,Talleres Primer Corte,Taller 2,70,5
+NOTA,19234568,Talleres Primer Corte,Taller 2,70,5,311,4.1
+NOTA,19234568,Talleres Primer Corte,Taller 2,70,5,312,1.5
+NOTA,19234568,Talleres Primer Corte,Taller 2,70,5,313,4.6
+PUNTO,19234568,Talleres Primer Corte,Taller 2,10,6
+NOTA,19234568,Talleres Primer Corte,Taller 2,10,6,311,2.6
+NOTA,19234568,Talleres Primer Corte,Taller 2,10,6,312,1.2
+NOTA,19234568,Talleres Primer Corte,Taller 2,10,6,313,5
+CORTE,19234568,Talleres Segundo Corte,8
+EVALUACION,19234568,Talleres Segundo Corte,Taller 3
+PUNTO,19234568,Talleres Segundo Corte,Taller 3,30,7
+PUNTO,19234568,Talleres Segundo Corte,Taller 3,30,8
+NOTA,19234568,Talleres Segundo Corte,Taller 3,30,8,311,3.2
+NOTA,19234568,Talleres Segundo Corte,Taller 3,30,8,312,3.8
+NOTA,19234568,Talleres Segundo Corte,Taller 3,30,8,313,2.2
+PUNTO,19234568,Talleres Segundo Corte,Taller 3,40,9
+NOTA,19234568,Talleres Segundo Corte,Taller 3,40,9,311,3.1
+NOTA,19234568,Talleres Segundo Corte,Taller 3,40,9,312,2.8
+NOTA,19234568,Talleres Segundo Corte,Taller 3,40,9,313,3.8
+EVALUACION,19234568,Talleres Segundo Corte,Taller 4
+PUNTO,19234568,Talleres Segundo Corte,Taller 4,35,10
+PUNTO,19234568,Talleres Segundo Corte,Taller 4,35,11
+NOTA,19234568,Talleres Segundo Corte,Taller 4,35,11,311,4
+NOTA,19234568,Talleres Segundo Corte,Taller 4,35,11,312,1.5
+NOTA,19234568,Talleres Segundo Corte,Taller 4,35,11,313,4.5
+PUNTO,19234568,Talleres Segundo Corte,Taller 4,30,12
+NOTA,19234568,Talleres Segundo Corte,Taller 4,30,12,311,4.7
+NOTA,19234568,Talleres Segundo Corte,Taller 4,30,12,312,3.4
+NOTA,19234568,Talleres Segundo Corte,Taller 4,30,12,313,1.8
+CORTE,79458124,Primer Corte Quices,7
+EVALUACION,79458124,Primer Corte Quices,quiz 1
+PUNTO,79458124,Primer Corte Quices,quiz 1,20,1
+NOTA,79458124,Primer Corte Quices,quiz 1,20,1,322,3.4
+PUNTO,79458124,Primer Corte Quices,quiz 1,80,2
+CORTE,1031540227,Examen1,50
+EVALUACION,1031540227,Examen1,Examen Final
+PUNTO,1031540227,Examen1,Examen Final,50,5
+NOTA,1031540227,Examen1,Examen Final,50,5,102,5
+CORTE,1031540227,Examen2,40
+EVALUACION,1031540227,Examen2,Examen Parcial 2
+PUNTO,1031540227,Examen2,Examen Parcial 2,20,1
+NOTA,1031540227,Examen2,Examen Parcial 2,20,1,105,4.2
+NOTA,1031540227,Examen2,Examen Parcial 2,20,1,106,3.8
+CORTE,1031540227,Parcial1,30
+EVALUACION,1031540227,Parcial1,Examen Parcial 1
+PUNTO,1031540227,Parcial1,Examen Parcial 1,10,1
+NOTA,1031540227,Parcial1,Examen Parcial 1,10,1,100,4.5
+NOTA,1031540227,Parcial1,Examen Parcial 1,10,1,101,3.8
+PUNTO,1031540227,Parcial1,Examen Parcial 1,20,2
+PUNTO,1031540227,Parcial1,Examen Parcial 1,15,2
+NOTA,1031540227,Parcial1,Examen Parcial 1,15,2,103,4
+NOTA,1031540227,Parcial1,Examen Parcial 1,15,2,104,3.5
+EVALUACION,1031540227,Parcial1,Examen Parcial 1
+CORTE,1031540227,Parcial1,30
+CORTE,1031540227,Parcial2,30
+EVALUACION,1031540227,Parcial2,Examen Parcial 2
+PUNTO,1031540227,Parcial2,Examen Parcial 2,35,1
+NOTA,1031540227,Parcial2,Examen Parcial 2,35,1,101,3
+NOTA,1031540227,Parcial2,Examen Parcial 2,35,1,102,4
+CORTE,1031540228,Examen1,50
+EVALUACION,1031540228,Examen1,Examen Final
+PUNTO,1031540228,Examen1,Examen Final,50,5
+NOTA,1031540228,Examen1,Examen Final,50,5,108,4.8
+NOTA,1031540228,Examen1,Examen Final,50,5,109,3.9
+CORTE,1031540228,Parcial1,30
+EVALUACION,1031540228,Parcial1,Examen Parcial 1
+PUNTO,1031540228,Parcial1,Examen Parcial 1,10,1
+CORTE,1031540229,Examen1,50
+EVALUACION,1031540229,Examen1,Examen Final
+PUNTO,1031540229,Examen1,Examen Final,50,5
+NOTA,1031540229,Examen1,Examen Final,50,5,113,4.7
+NOTA,1031540229,Examen1,Examen Final,50,5,114,4.1
+CORTE,1031540229,Parcial1,30
+EVALUACION,1031540229,Parcial1,Examen Parcial 1
+PUNTO,1031540229,Parcial1,Examen Parcial 1,15,1
+NOTA,1031540229,Parcial1,Examen Parcial 1,15,1,115,4.3
+NOTA,1031540229,Parcial1,Examen Parcial 1,15,1,116,3.9
+CORTE,1031540229,Parcial2,40
+EVALUACION,1031540229,Parcial2,Examen Parcial 2
+PUNTO,1031540229,Parcial2,Examen Parcial 2,20,2
+NOTA,1031540229,Parcial2,Examen Parcial 2,20,2,117,4.5
+NOTA,1031540229,Parcial2,Examen Parcial 2,20,2,118,4
+CORTE_VINCULADO,Ciencias I,19234568,Parcial 1
+CORTE_VINCULADO,Ciencias I,19234568,Parcial 2
+CORTE_VINCULADO,Ciencias I,19234568,Proyecto Final
+CORTE_VINCULADO,Ciencias I,19234568,Quiz Primer Corte
+CORTE_VINCULADO,Ciencias I,19234568,Quiz Segundo Corte
+CORTE_VINCULADO,Ciencias I,19234568,Talleres Primer Corte
+CORTE_VINCULADO,Ciencias I,19234568,Talleres Segundo Corte
+CORTE_VINCULADO,Historia,1031540228,Parcial1
+CORTE_VINCULADO,Biologia,1031540229,Parcial2
+CORTE_VINCULADO,Quimica,1031540229,Examen1
+CORTE_VINCULADO,Quimica,1031540229,Parcial1

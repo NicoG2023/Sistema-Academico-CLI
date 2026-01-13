@@ -1,0 +1,13 @@
+Complejidad en tiempo y memoria 1.70667
+Problemas NP y NP-Completos 2.03333
+Representacion de los arboles 1.46667
+Complejidad en algoritmos recursivos 5.43
+Tipos de algoritmos 5.13
+Arboles B y B+ 2.66
+Pilas y Colas 1.71333
+Arboles AVL y Rojinegros 2.55333
+Ordenes de complejidad 2.10667
+Busqueda y Ordenamientos 3.25333
+ 0
+Arboles Binarios 1.35333
+Listas y Multilistas 0.64

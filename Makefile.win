@@ -1,0 +1,76 @@
+# Project: ProyectoFinalCienciasDeLaComputacion
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Profesor.o PruebaProyectoFinal.o Temas.o Clases.o GestorProfesores.o Punto.o Evaluacion.o Corte.o Materias.o Archivos.o GestorEstudiantes.o Estudiante.o GestorClases.o GestorConsultas.o Nota.o GestorArchivos.o Menu.o
+LINKOBJ  = Profesor.o PruebaProyectoFinal.o Temas.o Clases.o GestorProfesores.o Punto.o Evaluacion.o Corte.o Materias.o Archivos.o GestorEstudiantes.o Estudiante.o GestorClases.o GestorConsultas.o Nota.o GestorArchivos.o Menu.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ProyectoFinalCienciasDeLaComputacion.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Profesor.o: Profesor.cpp
+	$(CPP) -c Profesor.cpp -o Profesor.o $(CXXFLAGS)
+
+PruebaProyectoFinal.o: PruebaProyectoFinal.cpp
+	$(CPP) -c PruebaProyectoFinal.cpp -o PruebaProyectoFinal.o $(CXXFLAGS)
+
+Temas.o: Temas.cpp
+	$(CPP) -c Temas.cpp -o Temas.o $(CXXFLAGS)
+
+Clases.o: Clases.cpp
+	$(CPP) -c Clases.cpp -o Clases.o $(CXXFLAGS)
+
+GestorProfesores.o: GestorProfesores.cpp
+	$(CPP) -c GestorProfesores.cpp -o GestorProfesores.o $(CXXFLAGS)
+
+Punto.o: Punto.cpp
+	$(CPP) -c Punto.cpp -o Punto.o $(CXXFLAGS)
+
+Evaluacion.o: Evaluacion.cpp
+	$(CPP) -c Evaluacion.cpp -o Evaluacion.o $(CXXFLAGS)
+
+Corte.o: Corte.cpp
+	$(CPP) -c Corte.cpp -o Corte.o $(CXXFLAGS)
+
+Materias.o: Materias.cpp
+	$(CPP) -c Materias.cpp -o Materias.o $(CXXFLAGS)
+
+Archivos.o: Archivos.cpp
+	$(CPP) -c Archivos.cpp -o Archivos.o $(CXXFLAGS)
+
+GestorEstudiantes.o: GestorEstudiantes.cpp
+	$(CPP) -c GestorEstudiantes.cpp -o GestorEstudiantes.o $(CXXFLAGS)
+
+Estudiante.o: Estudiante.cpp
+	$(CPP) -c Estudiante.cpp -o Estudiante.o $(CXXFLAGS)
+
+GestorClases.o: GestorClases.cpp
+	$(CPP) -c GestorClases.cpp -o GestorClases.o $(CXXFLAGS)
+
+GestorConsultas.o: GestorConsultas.cpp
+	$(CPP) -c GestorConsultas.cpp -o GestorConsultas.o $(CXXFLAGS)
+
+Nota.o: Nota.cpp
+	$(CPP) -c Nota.cpp -o Nota.o $(CXXFLAGS)
+
+GestorArchivos.o: GestorArchivos.cpp
+	$(CPP) -c GestorArchivos.cpp -o GestorArchivos.o $(CXXFLAGS)
+
+Menu.o: Menu.cpp
+	$(CPP) -c Menu.cpp -o Menu.o $(CXXFLAGS)
