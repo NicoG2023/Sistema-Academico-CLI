@@ -1,9 +1,6 @@
 #include "Corte.h"
 using namespace std;
 
-Corte::Corte(){
-}
-
 // Inserciones
 void Corte::agregarEvaluacion(const string& nombreEvaluacion) {
     Evaluacion nuevaEvaluacion(nombreEvaluacion);
@@ -50,7 +47,7 @@ void Corte::agregarNota(const string& nombreEvaluacion, int porcentajePunto, int
 }
 
 
-// Búsquedas
+// Bï¿½squedas
 
 Evaluacion Corte::buscarEvaluacion(const string& nombreEvaluacion) {
     int idx = evaluaciones->find(Evaluacion(nombreEvaluacion));
@@ -111,7 +108,7 @@ Evaluacion* Corte::buscarEvaluaciones(const std::string& nombreEvaluacion) {
     return NULL;
 }
 
-// Método para buscar un punto en una evaluación específica por porcentaje y código de tema
+// Mï¿½todo para buscar un punto en una evaluaciï¿½n especï¿½fica por porcentaje y cï¿½digo de tema
 Punto* Corte::buscarPuntos(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema) {
     Evaluacion* eval = buscarEvaluaciones(nombreEvaluacion);
     if (eval) {
@@ -123,7 +120,7 @@ Punto* Corte::buscarPuntos(const std::string& nombreEvaluacion, int porcentajePu
     return NULL;
 }
 
-// Método para buscar una nota en un punto específico de una evaluación específica por ID de estudiante
+// Mï¿½todo para buscar una nota en un punto especï¿½fico de una evaluaciï¿½n especï¿½fica por ID de estudiante
 Nota* Corte::buscarNotas(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante) {
     Punto* punto = buscarPuntos(nombreEvaluacion, porcentajePunto, codigo_tema);
     if (punto) {
@@ -142,17 +139,17 @@ void Corte::eliminarNota(const string& nombreEvaluacion, int porcentajePunto, in
     if (idx != -1) {
         Evaluacion& eval = evaluaciones->obtainByReference(idx);
         
-        // Obtener el índice del punto
+        // Obtener el ï¿½ndice del punto
         int idxPunto = eval.puntos->find(Punto(porcentajePunto, codigo_tema));
         if (idxPunto != -1) {
             Punto& punto = eval.puntos->obtainByReference(idxPunto);
             punto.notas->erase(Nota(IDEstudiante, 0.0));
             
-            // Actualizar el punto en la evaluación
+            // Actualizar el punto en la evaluaciï¿½n
             eval.puntos->erase(Punto(porcentajePunto, codigo_tema));
             eval.puntos->insert(punto);
             
-            // Actualizar la evaluación en el corte
+            // Actualizar la evaluaciï¿½n en el corte
             evaluaciones->erase(Evaluacion(nombreEvaluacion));
             evaluaciones->insert(eval);
         } else {

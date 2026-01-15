@@ -25,20 +25,22 @@ void GestorArchivos::guardarDatos(const std::string& archivo) {
 
     // Guardar estudiantes
     for (int i = 0; i < gestorEstudiantes.getEstudiantes().size(); ++i) {
-        Estudiante& estudiante = gestorEstudiantes.getEstudiantes().obtainByReference(i);
+        const Estudiante& estudiante = gestorEstudiantes.getEstudiantes().obtainByReference(i);
         buffer << "ESTUDIANTE," << estudiante.IDEstudiante << "," << estudiante.nombre << std::endl;
     }
 
     // Guardar clases
     const ArbolAVL<Clases>& clasesAVL = gestorClases.getClases();
     for (int i = 0; i < clasesAVL.size(); ++i) {
-        Clases& clase = clasesAVL.obtainByReference(i);
+        const Clases& clase = clasesAVL.obtainByReference(i);
+
         buffer << "CLASE," << clase.codigo_profesor << std::endl;
     }
 
     // Guardar materias, sus temas, estudiantes matriculados y archivos
     for (int i = 0; i < clasesAVL.size(); ++i) {
-        Clases& clase = clasesAVL.obtainByReference(i);
+        const Clases& clase = clasesAVL.obtainByReference(i);
+
 
         for (int j = 0; j < clase.clasesProfesor->size(); ++j) {
             Materias& materia = clase.clasesProfesor->obtainByReference(j);
@@ -393,7 +395,7 @@ void GestorArchivos::generarReporteRefuerzo() {
             for (int k = 0; k < corte.evaluaciones->size(); ++k) {
                 Evaluacion& evaluacion = corte.evaluaciones->obtainByReference(k);
 
-                // Recorrer todos los puntos de la evaluación
+                // Recorrer todos los puntos de la evaluaciï¿½n
                 for (int l = 0; l < evaluacion.puntos->size(); ++l) {
                     Punto& punto = evaluacion.puntos->obtainByReference(l);
 
@@ -435,7 +437,7 @@ void GestorArchivos::generarReporteRefuerzo() {
     // Calcular el promedio general por tema
     for (int i = 1; i <= listaPromedios.getTam(); i++) {
         PromedioTema& promedioTema = listaPromedios.buscar_nodoByReference(i);
-        promedioTema.promedio /= gestorClases.getClases().size(); // Número total de clases
+        promedioTema.promedio /= gestorClases.getClases().size(); // Nï¿½mero total de clases
     }
 
     // Ordenar los promedios por nota utilizando quicksort

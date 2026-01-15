@@ -15,7 +15,7 @@ void GestorConsultas::consultaPromedioEstudiante(int IDEstudiante, const std::st
     // Se busca la clase que dicta el profesor
     Clases* clase = gestorClases.buscarClases(profesor.cedula);
     if (!clase) {
-        std::cout << "Clase no encontrada para el profesor con cédula: " << profesor.cedula << std::endl;
+        std::cout << "Clase no encontrada para el profesor con cï¿½dula: " << profesor.cedula << std::endl;
         return;
     }
     // Se busca la materia dentro de la clase
@@ -101,7 +101,7 @@ void GestorConsultas::consultaComportamientoPromedioCurso(const std::string& mat
         return;
     }
 
-    // Llamar al método calcularComportamientoPromedioCurso de Materias
+    // Llamar al mï¿½todo calcularComportamientoPromedioCurso de Materias
     Materias* mate = clase->buscarMaterias(materia);
     if (mate == NULL) {
         std::cout << "Materia no encontrada en la clase." << std::endl;
@@ -118,7 +118,7 @@ void GestorConsultas::consultaComportamientoPromedioCurso(const std::string& mat
 void GestorConsultas::consultaComportamientoPromedioProfesor(int codigoProfesor) {
     Clases* clase = gestorClases.buscarClases(codigoProfesor);
     if (!clase) {
-        std::cout << "No se encontraron clases para el profesor con código: " << codigoProfesor << std::endl;
+        std::cout << "No se encontraron clases para el profesor con cï¿½digo: " << codigoProfesor << std::endl;
         return;
     }
 
@@ -130,11 +130,11 @@ void GestorConsultas::consultaProfesoresPorClases(int numeroClases) {
 }
 
 void GestorConsultas::consultaEstudiantesPorNota(double notaDada, const std::string& tema) {
-    Lista<InformacionNota> estudiantesConNotaMayor;  // Lista para almacenar información de notas superiores a notaDada
+    Lista<InformacionNota> estudiantesConNotaMayor;  // Lista para almacenar informaciï¿½n de notas superiores a notaDada
 
     const ArbolAVL<Clases>& clasesAVL = gestorClases.getClases();
     for (unsigned int i = 0; i < clasesAVL.size(); i++) {
-        Clases& clase = clasesAVL.obtainByReference(i);
+        const Clases& clase = clasesAVL.obtainByReference(i);
 
         Profesor* profesor = gestorProfesores.buscarProfesores(clase.codigo_profesor);
         if (profesor) {
@@ -189,7 +189,7 @@ void GestorConsultas::consultaEstudiantesPorNota(double notaDada, const std::str
         for (unsigned int i = 1; i <= estudiantesConNotaMayor.getTam(); i++) {
             InformacionNota infoNota = estudiantesConNotaMayor.buscar_nodo(i);
             std::cout << "ID: " << infoNota.idEstudiante << ", Nombre: " << infoNota.nombreEstudiante
-                      << ", Evaluación: " << infoNota.nombreEvaluacion << ", Punto: " << infoNota.porcentaje
+                      << ", Evaluaciï¿½n: " << infoNota.nombreEvaluacion << ", Punto: " << infoNota.porcentaje
                       << "%, Nota: " << infoNota.valorNota << std::endl;
         }
     }

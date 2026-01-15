@@ -1,32 +1,34 @@
 #ifndef CORTE_H
 #define CORTE_H
 
+#include <string>
+#include <iostream>
 #include "ArbolAVL.h"
 #include "Evaluacion.h"
-using namespace std;
 
 class Corte {
 public:
-    string nombre;
+    std::string nombre;
     int porcentaje;
-    ArbolAVL<Evaluacion> *evaluaciones;
+    ArbolAVL<Evaluacion>* evaluaciones;
 
-    // Constructor
+    // Constructor principal
     Corte(const std::string& nombre, int porcentaje)
         : nombre(nombre), porcentaje(porcentaje), evaluaciones(new ArbolAVL<Evaluacion>()) {}
-        
-    Corte();
+
+    // Constructor por defecto (si lo usas en algún lado)
+    Corte() : nombre(""), porcentaje(0), evaluaciones(new ArbolAVL<Evaluacion>()) {}
 
     // Destructor
-    ~Corte() {
-        delete evaluaciones;
-    }
+    ~Corte() { delete evaluaciones; }
 
-    // Constructor de copia
+    // Copy ctor
     Corte(const Corte& other)
-        : nombre(other.nombre), porcentaje(other.porcentaje), evaluaciones(new ArbolAVL<Evaluacion>(*other.evaluaciones)) {}
+        : nombre(other.nombre),
+          porcentaje(other.porcentaje),
+          evaluaciones(new ArbolAVL<Evaluacion>(*other.evaluaciones)) {}
 
-    // Operador de asignaci�n
+    // Asignación
     Corte& operator=(const Corte& other) {
         if (this != &other) {
             delete evaluaciones;
@@ -37,45 +39,33 @@ public:
         return *this;
     }
 
-    bool operator<(const Corte& otro) const {
-        return nombre < otro.nombre;
-    }
+    bool operator<(const Corte& otro) const { return nombre < otro.nombre; }
+    bool operator>(const Corte& otro) const { return nombre > otro.nombre; }
+    bool operator!=(const Corte& otro) const { return nombre != otro.nombre; }
+    bool operator==(const Corte& otro) const { return nombre == otro.nombre; }
 
-    bool operator>(const Corte& otra) const {
-        return nombre > otra.nombre;
-    }
+    void agregarEvaluacion(const std::string& nombreEvaluacion);
+    void agregarPunto(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
+    void agregarNota(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema,int IDEstudiante, double valor);
+    void eliminarNota(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
+    void eliminarEvaluacion(const std::string& nombreEvaluacion);
+    void eliminarPunto(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
 
-    bool operator!=(const Corte& otro) const {
-        return nombre != otro.nombre;
-    }
+    Evaluacion buscarEvaluacion(const std::string& nombreEvaluacion);
+    Evaluacion* buscarEvaluaciones(const std::string& nombreEvaluacion);
+    Punto* buscarPuntos(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
+    Nota* buscarNotas(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
 
-    bool operator==(const Corte& otro) const {
-        return nombre == otro.nombre;
-    }
+    Punto buscarPunto(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
+    Nota buscarNota(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
 
-    void agregarEvaluacion(const string& nombreEvaluacion);
-    void agregarPunto(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
-    void agregarNota(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema,int IDEstudiante, double valor);
-    void eliminarNota(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
-    void eliminarEvaluacion(const string& nombreEvaluacion);
-    void eliminarPunto(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
-    Evaluacion buscarEvaluacion(const string& nombreEvaluacion);
-    Evaluacion* buscarEvaluaciones(const string& nombreEvaluacion);
-    Punto* buscarPuntos(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
-    Nota* buscarNotas(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
-    Punto buscarPunto(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
-    Nota buscarNota(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema, int IDEstudiante);
-    
     void listarEvaluaciones();
-    void listarPuntos(const string& nombreEvaluacion);
-    void listarNotas(const string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
+    void listarPuntos(const std::string& nombreEvaluacion);
+    void listarNotas(const std::string& nombreEvaluacion, int porcentajePunto, int codigo_tema);
 
-    friend ostream& operator<<(ostream& out, const Corte& est) {
-        return out << "Nombre: " << est.nombre << ", Porcentaje: " << est.porcentaje<<endl;
+    friend std::ostream& operator<<(std::ostream& out, const Corte& c) {
+        return out << "Nombre: " << c.nombre << ", Porcentaje: " << c.porcentaje << std::endl;
     }
 };
 
-
-
 #endif // CORTE_H
-

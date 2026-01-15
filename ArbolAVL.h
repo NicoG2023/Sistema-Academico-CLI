@@ -4,6 +4,7 @@
 #define ARBOLAVL_H
 
 #include <iostream>
+#include <stdexcept>
 #include "NodoArbolAVL.h"
 #include "pila.h"
 
@@ -16,13 +17,13 @@ class ArbolAVL {
     void balanceOther(NodoArbolAVL<T> **path[], int path_length);
     void display(NodoArbolAVL<T>* cur, int depth = 0, int state = 0);
 
-    // Función auxiliar para hacer una copia profunda de los nodos
+    // Funciï¿½n auxiliar para hacer una copia profunda de los nodos
     NodoArbolAVL<T>* copiarNodo(const NodoArbolAVL<T>* nodo);
 
 public:
     ArbolAVL();
     ArbolAVL(const ArbolAVL& other); // Constructor de copia
-    ArbolAVL& operator=(const ArbolAVL& other); // Operador de asignación
+    ArbolAVL& operator=(const ArbolAVL& other); // Operador de asignaciï¿½n
     ~ArbolAVL();
 
     void insert(T value);
@@ -36,13 +37,15 @@ public:
     int find(T value) const;
     T obtain(T value) const;
     T obtainByIndex(unsigned int idx) const;
-    T& obtainByReference(unsigned int idx) const;
+    T& obtainByReference(unsigned int idx);
+    const T& obtainByReference(unsigned int idx) const;
     int lower_bound(T value) const;
     int upper_bound(T value) const;
 
     const T& find_min() const;
     const T& find_max() const;
     const T& operator[](unsigned int idx) const;
+    T& operator[](unsigned int idx);
 
     void display();
     NodoArbolAVL<T>* getRoot() const;
@@ -269,7 +272,7 @@ template <class T>
 void ArbolAVL<T>::balance(NodoArbolAVL<T> **path[], int path_length) {
     for (int i = path_length - 1; i >= 0; i--) {
         if (*path[i] == NULL) {
-            continue; // Asegúrate de que el nodo no es nulo
+            continue; // Asegï¿½rate de que el nodo no es nulo
         }
 
         (*path[i])->updateValues();
@@ -321,13 +324,13 @@ int ArbolAVL<T>::find(T value) const {
 
 template <class T>
 T ArbolAVL<T>::obtain(T value) const {
-    int index = find(value);  // Utiliza el método find existente para obtener el índice
+    int index = find(value);  // Utiliza el mï¿½todo find existente para obtener el ï¿½ndice
     if (index == -1) {
         std::cerr << "Value not found in AVL Tree" << std::endl;
         // Retornar un valor por defecto o manejar de otra manera
         return T();
     }
-    return (*this)[index];  // Utiliza el operador[] para obtener el valor en el índice encontrado
+    return (*this)[index];  // Utiliza el operador[] para obtener el valor en el ï¿½ndice encontrado
 }
 
 template <class T>
@@ -399,28 +402,36 @@ int ArbolAVL<T>::upper_bound(T value) const {
 }
 
 template <class T>
-T& ArbolAVL<T>::obtainByReference(unsigned int idx) const {
-    if (idx >= _size) {
-        std::cout<<"Index out of range";
-    }
+T& ArbolAVL<T>::obtainByReference(unsigned int idx) {
+    if (idx >= _size) throw std::out_of_range("Index out of range");
 
-    NodoArbolAVL<T> *cur = root;
+    NodoArbolAVL<T>* cur = root;
     while (cur != NULL) {
-        unsigned int left = cur->left != NULL ? cur->left->count : 0;
+        unsigned int left = (cur->left != NULL) ? cur->left->count : 0;
 
-        if (left == idx) {
-            return cur->value;
-        } else if (left < idx) {
-            idx -= left + 1;
-            cur = cur->right;
-        } else {
-            cur = cur->left;
-        }
+        if (left == idx) return cur->value;
+        if (left < idx) { idx -= left + 1; cur = cur->right; }
+        else cur = cur->left;
     }
 
-    std::cout<<"Index out of range";
+    throw std::out_of_range("Index out of range");
 }
 
+template <class T>
+const T& ArbolAVL<T>::obtainByReference(unsigned int idx) const {
+    if (idx >= _size) throw std::out_of_range("Index out of range");
+
+    NodoArbolAVL<T>* cur = root;
+    while (cur != NULL) {
+        unsigned int left = (cur->left != NULL) ? cur->left->count : 0;
+
+        if (left == idx) return cur->value;
+        if (left < idx) { idx -= left + 1; cur = cur->right; }
+        else cur = cur->left;
+    }
+
+    throw std::out_of_range("Index out of range");
+}
 
 template <class T>
 const T& ArbolAVL<T>::find_min() const {
@@ -444,22 +455,51 @@ const T& ArbolAVL<T>::find_max() const {
 
 template <class T>
 const T& ArbolAVL<T>::operator[](unsigned int idx) const {
-    NodoArbolAVL<T> *cur = root;
-    unsigned int left = cur->left != NULL ? cur->left->count : 0;
+    if (idx >= _size) {
+        throw std::out_of_range("Index out of range");
+    }
 
-    while (left != idx) {
-        if (left < idx) {
+    NodoArbolAVL<T> *cur = root;
+    while (cur != NULL) {
+        unsigned int left = (cur->left != NULL) ? cur->left->count : 0;
+
+        if (left == idx) {
+            return cur->value;
+        } else if (left < idx) {
             idx -= left + 1;
             cur = cur->right;
-            left = cur->left != NULL ? cur->left->count : 0;
         } else {
             cur = cur->left;
-            left = cur->left != NULL ? cur->left->count : 0;
         }
     }
 
-    return cur->value;
+    throw std::out_of_range("Index out of range");
 }
+
+template <class T>
+T& ArbolAVL<T>::operator[](unsigned int idx) {
+    if (idx >= _size) {
+        throw std::out_of_range("Index out of range");
+    }
+
+    NodoArbolAVL<T> *cur = root;
+    while (cur != NULL) {
+        unsigned int left = (cur->left != NULL) ? cur->left->count : 0;
+
+        if (left == idx) {
+            return cur->value;
+        } else if (left < idx) {
+            idx -= left + 1;
+            cur = cur->right;
+        } else {
+            cur = cur->left;
+        }
+    }
+
+    throw std::out_of_range("Index out of range");
+}
+
+
 
 template <class T>
 void ArbolAVL<T>::display() {

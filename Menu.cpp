@@ -7,7 +7,11 @@ Menu::Menu(GestorProfesores& gp, GestorEstudiantes& ge, GestorClases& gc, Gestor
 void Menu::mostrarMenuPrincipal() {
     int opcion = 0;
     gestorArchivos.cargarDatos("Database");
+    #ifdef _WIN32
     system("cls");
+    #else
+        system("clear");
+    #endif
     do {
     	//system("cls");
         std::cout << "***********************************************" << std::endl;
@@ -23,7 +27,7 @@ void Menu::mostrarMenuPrincipal() {
         std::cout << "4. Generar Reporte Refuerzos" << std::endl;
         std::cout << "5. Hacer Consultas" << std::endl;
         std::cout << "6. Menu Profesor" << std::endl;
-        std::cout << "7. Menu Mostrar" << std::endl;  // Nueva opción para el menú "MenuMostrar"
+        std::cout << "7. Menu Mostrar" << std::endl;  // Nueva opciï¿½n para el menï¿½ "MenuMostrar"
         std::cout << "8. Salir" << std::endl;
         std::cout << "Opcion: ";
         std::cin >> opcion;
@@ -294,8 +298,8 @@ void Menu::agregarCorte(Profesor& profesor) {
     std::string nombreCorte;
     int porcentaje;
 
-    // Asegúrate de limpiar el buffer de entrada antes de leer el nombre del corte
-    std::cin.ignore(10000, '\n'); // Usamos un valor grande para ignorar cualquier carácter restante
+    // Asegï¿½rate de limpiar el buffer de entrada antes de leer el nombre del corte
+    std::cin.ignore(10000, '\n'); // Usamos un valor grande para ignorar cualquier carï¿½cter restante
 
     std::cout << "Ingrese el nombre del corte: ";
     std::getline(std::cin, nombreCorte);
@@ -309,8 +313,8 @@ void Menu::agregarCorte(Profesor& profesor) {
 void Menu::agregarEvaluacion(Profesor& profesor) {
     std::string nombreCorte, nombreEvaluacion;
 
-    // Asegúrate de limpiar el buffer de entrada antes de leer el nombre del corte
-    std::cin.ignore(10000, '\n'); // Usamos un valor grande para ignorar cualquier carácter restante
+    // Asegï¿½rate de limpiar el buffer de entrada antes de leer el nombre del corte
+    std::cin.ignore(10000, '\n'); // Usamos un valor grande para ignorar cualquier carï¿½cter restante
 
     std::cout << "Ingrese el nombre del corte: ";
     std::getline(std::cin, nombreCorte);

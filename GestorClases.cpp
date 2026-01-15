@@ -6,7 +6,7 @@ GestorClases::GestorClases() : gestorProfesores(*(new GestorProfesores())) {}
 GestorClases::GestorClases(GestorProfesores& gestorProfesores) : gestorProfesores(gestorProfesores) {}
 
 GestorClases::~GestorClases() {
-    delete &gestorProfesores; // Si `gestorProfesores` se creó con `new` en el constructor sin parámetros
+    delete &gestorProfesores; // Si `gestorProfesores` se creï¿½ con `new` en el constructor sin parï¿½metros
 }
 
 NodoArbolAVL<Clases>* GestorClases::getRootClases() const {
@@ -20,7 +20,7 @@ void GestorClases::listarClases() {
 Clases* GestorClases::buscarClases(int codigo_profesor){
 	int idx = clases.find(Clases(codigo_profesor));
     if (idx == -1) {
-        std::cout << "Clase con código de profesor no encontrada" << std::endl;
+        std::cout << "Clase con cï¿½digo de profesor no encontrada" << std::endl;
         return NULL;
     }
     return &clases.obtainByReference(idx);
@@ -56,7 +56,7 @@ void GestorClases::agregarMateria(int codigo_profesor, const string& materia) {
 Temas* GestorClases::buscarTemaPorCodigo(int codigoTema) {
     const ArbolAVL<Clases>& clasesAVL = getClases();
     for (int i = 0; i < clasesAVL.size(); ++i) {
-        Clases& clase = clasesAVL.obtainByReference(i);
+        const Clases& clase = clasesAVL.obtainByReference(i);
         for (int j = 0; j < clase.clasesProfesor->size(); ++j) {
             Materias& materia = clase.clasesProfesor->obtainByReference(j);
             for (int k = 0; k < materia.temas.size(); ++k) {
@@ -74,11 +74,11 @@ Temas* GestorClases::buscarTemaPorCodigo(int codigoTema) {
 void GestorClases::eliminarClase(int codigo_profesor) {
     int idx = clases.find(Clases(codigo_profesor));
     if (idx == -1) {
-        std::cout << "Error: Clase con código de profesor " << codigo_profesor << " no encontrada." << std::endl;
+        std::cout << "Error: Clase con cï¿½digo de profesor " << codigo_profesor << " no encontrada." << std::endl;
         return;
     }
     clases.erase(clases.obtainByReference(idx));
-    std::cout << "Clase con código de profesor " << codigo_profesor << " eliminada." << std::endl;
+    std::cout << "Clase con cï¿½digo de profesor " << codigo_profesor << " eliminada." << std::endl;
 }
 
 void GestorClases::consultarProfesoresPorNumeroClases(int numeroClases) {
@@ -106,7 +106,7 @@ void GestorClases::consultarProfesoresPorNumeroClases(int numeroClases) {
             NodoProfesor temp = listaProfesores.buscar_nodo(i);
             Profesor* profesor = gestorProfesores.buscarProfesores(temp.cedula);
             if (profesor) {
-                std::cout << "Cédula: " << profesor->cedula << ", Nombre: " << profesor->nombre << ", Materias: ";
+                std::cout << "Cï¿½dula: " << profesor->cedula << ", Nombre: " << profesor->nombre << ", Materias: ";
 
                 // Recorrer las clases para encontrar las materias del profesor
                 for (unsigned int j = 0; j < clases.size(); ++j) {
@@ -126,7 +126,7 @@ void GestorClases::consultarProfesoresPorNumeroClases(int numeroClases) {
                 }
                 std::cout << std::endl;
             } else {
-                std::cerr << "Profesor no encontrado para la cédula: " << temp.cedula << std::endl;
+                std::cerr << "Profesor no encontrado para la cï¿½dula: " << temp.cedula << std::endl;
             }
         }
     }
